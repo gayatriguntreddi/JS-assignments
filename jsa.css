@@ -1,0 +1,51 @@
+.container{
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #F1F8E9; 
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2px;
+}
+.container .agevalidator, .container .sum,
+.container .eo,
+.container .table,
+.container .Simple-Calculator
+
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .agevalidator h3, .container .sum h3,
+.container .eo h3,
+.container .table h3,
+.container .Simple-Calculator h3
+
+{
+    margin-bottom: 10px;
+}
+   
+.container .agevalidator h4, .container .sum h4,
+.container .eo h4,
+.container .table h4,
+.container .Simple-Calculator h4 {
+    margin-bottom: 10px;
+}
+button {
+    background-color: #00796b; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.container span {
+    font-size: 1.2em;
+    font-weight: bold;
+   
+}

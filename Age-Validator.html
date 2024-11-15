@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var age= parseInt(prompt("Please enter the number",""));  
+        console.log(age);
+        while (isNaN(age)){
+           age= parseInt(prompt("Please enter valid number","")); 
+        }
+         if (typeof age === "number"){
+        if (age >= 18){
+        console.log("You are eligible to vote.");
+        }
+        
+        else{
+            console.log("You are not eligible to vote.");
+        }
+    }
+  
+    </script>
+</body>
+</html>
