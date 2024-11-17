@@ -1,9 +1,9 @@
 function agevalidator() {
-    var age = parseInt(prompt("Please enter your age:", ""));
+    var age = parseInt(document.getElementById("agev").value);
 
     
     while (isNaN(age) ) {
-        age = parseInt(prompt("Please enter a valid number:", ""));
+        age = parseInt(document.getElementById("agev").value);
         
     }
     var resultElement = document.getElementById("age");
@@ -23,7 +23,7 @@ function agevalidator() {
 }
 
 function sum(){
-    var num = parseInt(prompt("Please enter the number:",""));
+    var num = parseInt(document.getElementById("sumn").value);
     var sum = 0;
     for (var i=1;i<= num;i++){
        sum = sum+i;
@@ -32,10 +32,10 @@ function sum(){
 }
 
 function eo(){
-var num = parseInt(prompt("Please enter the number:",""));
+var num = parseInt(document.getElementById("eo1").value);
 
 while (isNaN(num)){
-        num= parseInt(prompt("Please enter valid number","")); 
+        num= parseInt(document.getElementById("agev").value);
      }
      var resultElement = document.getElementById("eo");
 if (num%2 == 0){
@@ -50,10 +50,10 @@ document.getElementById("eo").innerHTML = result;
 }
 
 function table(){
-    var num = parseInt(prompt("Please enter the number:",""));
+    var num = parseInt(document.getElementById("tablem").value);
    
    while (isNaN(num)){
-           num= parseInt(prompt("Please enter valid number","")); 
+           num= parseInt(document.getElementById("tablem").value); 
         }
         var result = "";
         var result1 = "";
@@ -67,9 +67,9 @@ function table(){
         document.getElementById("table").innerHTML =  result1;  
 }
 function sc(){
-    const operater = prompt('Enter operator ( either +, -, *, / or % ): ');
-    var num1 = parseInt(prompt("Please enter the number:",""));
-    var num2 = parseInt(prompt("Please enter the number:",""));
+    const operater = document.getElementById("sc3").value;
+    var num1 = parseInt(document.getElementById("sc1").value);
+    var num2 = parseInt(document.getElementById("sc2").value);
     while (isNaN(num1)){
             num1= parseInt(prompt("Please enter valid number","")); 
          }
@@ -92,12 +92,14 @@ function sc(){
       
          }
          else if (operater == '/') {
-            result = num1 / num2;
+            result =  num2 !== 0 ? num1 / num2 : "Cannot divide by zero";
            
          }
-         else  {
-            result = num1 % num2;
-        
-         }
+         else if (operater == '%'){
+            result = num2 !== 0 ? num1 % num2 : "Cannot divide by zero";
+         
+         } else {
+            result = "Invalid operator";
+        }
          document.getElementById("sc").innerHTML =  result;  
 }
